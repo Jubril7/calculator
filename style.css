@@ -1,0 +1,105 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: black;
+    color: white;
+}
+
+.text-area{
+    text-align: center;
+    font-size: 45px;
+    margin-top: 120px;
+    margin-left: 94px;
+}
+
+.buttons{
+    text-align: center;
+    margin-top: 9px;
+}
+
+.dot{
+    height: 49px;
+    width: 49px;
+    background-color: rgb(44, 41, 41);
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center; 
+    cursor: pointer;
+    padding: 10px;
+    font-size: 26px;
+}
+
+.dot1{
+    height: 49px;
+    width: 49px;
+    background-color: rgb(136, 128, 128);
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center; 
+    cursor: pointer;
+    padding: 10px;
+    font-size: 26px;
+}
+
+.dot2{
+    height: 49px;
+    width: 49px;
+    background-color: rgb(231, 166, 44);
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center; 
+    cursor: pointer;
+    padding: 9px;
+    font-size: 26px;
+}
+
+.dott{
+    height: 54px;
+    width: 101px;
+    background-color: rgb(44, 41, 41);
+    border-radius: 45px;
+    display: inline-block;
+    text-align: center; 
+    cursor: pointer;
+    padding: 10px;
+    font-size: 26px;
+    padding-right: 55px;
+}
+
+div{
+    margin-top: 9px;
+}
+
+.dot:hover{
+    background-color: rgb(65, 61, 57);
+    transition: 0.2s;
+}
+
+.dot1:hover{
+    background-color: rgb(155, 147, 140);
+}
+
+.dot2:hover{
+    background-color: rgb(246, 230, 216);
+}
+
+.dott:hover{
+    background-color: rgb(65, 61, 57);
+    transition: 0.2s;
+}
+
+.switch{
+    text-align: center;
+    margin-top: 30px;
+}
+button{
+    width: 80px;
+    height: 40px;
+    cursor: pointer;
+    background-color: green;
+    border-radius: 30px;
+}
