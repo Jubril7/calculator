@@ -5,6 +5,5 @@ const dot2 = document.querySelectorAll(".dot2");
 const dott = document.querySelector(".dott");
 const btn = document.querySelector(".btn");
 
-btn.addEventListener("click", (e) =>{
-    textarea.disables = "true"
-})
+
+
