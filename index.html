@@ -8,42 +8,44 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <section class="text-area"></section>
+
+    <div class="screen-display" type = "number"></div>
     <section class="buttons">
         <div class="container">
             <div>
-                <button class="dot1">C</button>
-                <button class="dot1">+/-</button>
-                <button class="dot1">%</button>
-                <button class="dot2">&#xF7;</button>
+                <button class="operation">C</button>
+                <button class="operations">+/-</button>
+                <button class="operations">%</button>
+                <button class="operations">&#xF7;</button>
             </div>    
             <div>
-                <button class="dot">7</button>
-                <button class="dot">8</button>
-                <button class="dot">9</button>
-                <button class="dot2">x</button>
+                <button class="numbers" id="7">7</button>
+                <button class="numbers" id="8">8</button>
+                <button class="numbers" id="9">9</button>
+                <button class="operations">x</button>
             </div>
             <div>
-                <button class="dot">4</button>
-                <button class="dot">5</button>
-                <button class="dot">6</button>
-                <button class="dot2">-</button>
+                <button class="numbers" id="4">4</button>
+                <button class="numbers" id="5">5</button>
+                <button class="numbers" id="6">6</button>
+                <button class="operations">-</button>
             </div>
             <div>
-                <button class="dot">1</button>
-                <button class="dot">2</button>
-                <button class="dot">3</button>
-                <button class="dot2">+</button>
+                <button class="numbers" id="1">1</button>
+                <button class="numbers" id="2">2</button>
+                <button class="numbers" id="3">3</button>
+                <button class="operations">+</button>
             </div>
             <div>
-                <button class="dott">0</button>
-                <button class="dot">.</button>
-                <button class="dot2">=</button>
+                <button class="number" id="0">0</button>
+                <button class="numbers">.</button>
+                <button class="operations">=</button>
             </div>
         </div>
     </section>
     <section class="switch">
-        <button class="btn">ON</button>
+        <button class="btn-on">ON</button>
+        <button class="btn-off">OFF</button>
     </section>
     <script defer src="script.js"></script>
 </body>

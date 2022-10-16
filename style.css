@@ -9,19 +9,20 @@ body{
     color: white;
 }
 
-.text-area{
+.screen-display{
     text-align: center;
     font-size: 45px;
-    margin-top: 120px;
+    margin-top: 150px;
     margin-left: 94px;
 }
 
 .buttons{
     text-align: center;
     margin-top: 9px;
+    padding-right: 62px;
 }
 
-.dot{
+.numbers{
     height: 49px;
     width: 49px;
     background-color: rgb(44, 41, 41);
@@ -34,7 +35,7 @@ body{
     color: white;
 }
 
-.dot1{
+.operation{
     height: 49px;
     width: 49px;
     background-color: rgb(136, 128, 128);
@@ -47,7 +48,7 @@ body{
     color: white;
 }
 
-.dot2{
+.operations{
     height: 49px;
     width: 49px;
     background-color: rgb(231, 166, 44);
@@ -60,7 +61,7 @@ body{
     color: white;
 }
 
-.dott{
+.number{
     height: 54px;
     width: 101px;
     background-color: rgb(44, 41, 41);
@@ -78,16 +79,16 @@ div{
     margin-top: 9px;
 }
 
-.dot:hover{
+.numbers:hover{
     background-color: rgb(65, 61, 57);
     transition: 0.2s;
 }
 
-.dot1:hover{
+.operation:hover{
     background-color: rgb(155, 147, 140);
 }
 
-.dot2:hover{
+.operations:hover{
     background-color: rgb(246, 230, 216);
 }
 
@@ -98,12 +99,21 @@ div{
 
 .switch{
     text-align: center;
-    margin-top: 30px;
+    margin-top: 18px;
+    padding-right: 60px;
 }
-button{
+.btn-on{
     width: 80px;
     height: 40px;
     cursor: pointer;
     background-color: green;
+    border-radius: 30px;
+}
+
+.btn-off{
+    width: 80px;
+    height: 40px;
+    cursor: pointer;
+    background-color: red;
     border-radius: 30px;
 }
