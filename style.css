@@ -21,6 +21,10 @@ body{
     margin-top: 93px;
 }
 
+.screen-display-pre{
+    display: none;
+}
+
 textarea{
     resize: none;
 }
@@ -31,7 +35,7 @@ textarea{
     padding-right: 62px;
 }
 
-.numbers{
+.numbers, .decimal{
     height: 49px;
     width: 49px;
     background-color: rgb(44, 41, 41);
@@ -59,7 +63,7 @@ textarea{
     border: none;
 }
 
-.operations{
+.operations, .operations1{
     height: 49px;
     width: 49px;
     background-color: rgb(231, 166, 44);
@@ -92,16 +96,16 @@ div{
     margin-top: 9px;
 }
 
-.numbers:hover{
+.numbers:hover, .decimal:hover, .number:hover{
     background-color: rgb(65, 61, 57);
     transition: 0.2s;
 }
 
-.operation:hover{
+.operation:hover, .operation1:hover, .operation2:hover{
     background-color: rgb(155, 147, 140);
 }
 
-.operations:hover{
+.operations:hover, .operations1:hover{
     background-color: rgb(246, 230, 216);
 }
 

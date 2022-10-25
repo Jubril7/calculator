@@ -7,25 +7,58 @@ const btnOn = document.querySelector(".btn-on");
 const btnOff = document.querySelector(".btn-off");
 const plusOrMinus = document.querySelector(".operation1");
 const dataPercent = document.querySelector(".operation2");
-
-
-
+const decimal = document.querySelector(".decimal");
+const dataEquals = document.querySelector(".operations1")
 
 dataNumbers.forEach(function(button){
     button.addEventListener("click", function(){
       let buttonValue = this.textContent;
-        screenDisplay.innerHTML = (screenDisplay.innerHTML + buttonValue).substr(0, 12);
+        screenDisplay.innerHTML = (screenDisplay.innerHTML += buttonValue).replace(/^0+/, '').substr(0, 9);   
     })
 })
 
 dataNumber.addEventListener("click", function(){
     let buttonValue = this.textContent;
-    screenDisplay.innerHTML = (screenDisplay.innerHTML + buttonValue).substr(0, 10); 
+    screenDisplay.innerHTML = (screenDisplay.innerHTML += buttonValue).replace(/^0+/, '').substr(0, 9);
 })
 
+decimal.addEventListener("click", function(){
+  if(screenDisplay.innerHTML.indexOf(".") === -1){
+    screenDisplay.innerHTML += "."
+  }
+})  
+
 dataOperation.addEventListener("click", function(){
-  screenDisplay.innerHTML = screenDisplay.innerHTML.slice(0, -1)
-    
+    screenDisplay.innerHTML = "0"
+    // dataOperation.innerText = "AC"
+//   screenDisplay.innerHTML = screenDisplay.innerHTML.slice(0, -1)  
+})
+
+dataOperations.forEach(function(button){
+    button.addEventListener("click", function(e){
+        button.style.backgroundColor = "rgb(246, 230, 216)"
+        
+        let buttonValue = this.textContent;
+        buttonValue = e.target.innerText;
+        console.log('Button text is ', buttonValue);
+        if(buttonValue ===  "x"){
+            buttonValue = "*";
+
+        } else if(buttonValue === "-"){
+            buttonValue = "-"
+        
+        
+        }else if(buttonValue === "+"){
+            buttonValue = "+"
+        
+        
+        }else (buttonValue === "&#xF7")
+            buttonValue = "/"
+        
+        
+        
+
+    })
 })
 
 btnOn.addEventListener("click", function(){
@@ -82,6 +115,9 @@ btnOff.addEventListener("click", function(){
 })
 
 plusOrMinus.addEventListener("click", function(){
-    `$("#p").text(-(parseFloat($("#p").text())))`;
+    screenDisplay.innerHTML = screenDisplay.innerHTML * -1
+})
 
+dataPercent.addEventListener("click", function(){
+    screenDisplay.innerHTML = screenDisplay.innerHTML / 100
 })
