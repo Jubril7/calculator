@@ -119,19 +119,12 @@ div{
     margin-top: 18px;
     padding-right: 60px;
 }
-.btn-on{
-    width: 80px;
-    height: 40px;
-    cursor: pointer;
-    background-color: green;
-    border-radius: 30px;
-}
-
-.btn-off{
+.btn-onoff{
     width: 80px;
     height: 40px;
     cursor: pointer;
     background-color: red;
     border-radius: 30px;
 }
+
 
