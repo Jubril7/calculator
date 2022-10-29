@@ -10,19 +10,32 @@ const decimal = document.querySelector(".decimal");
 const dataEquals = document.querySelector(".operations1");
 const prevScreenDisplay = document.querySelector(".screen-display-pre");
 
-screenDisplay.innerHTML = screenDisplay.innerHTML.toLocaleString("en-US")
+// let disVal = screenDisplay.innerHTML;
+// if(disVal != " "){
+//     Number(disVal).toLocaleString("en-US")
+// }
 
 
 dataNumbers.forEach(function(button){
     button.addEventListener("click", function(){
       let buttonValue = this.textContent;
-        screenDisplay.innerHTML = (screenDisplay.innerHTML += buttonValue).replace(/^0+/, '').substr(0, 9);
+        screenDisplay.innerHTML = ((screenDisplay.innerHTML += buttonValue).replace(/^0+/, '').substr(0, 9)).toLocaleString("en-US");
+        dataOperation.innerText = "C"
+        dataOperation.addEventListener("click", function(){
+            dataOperations.forEach(function(button){
+                button.style.backgroundColor = "rgb(231, 166, 44)"
+                prevScreenDisplay.innerHTML = " "
+            })       
+        })
     })
 })
 
 dataNumber.addEventListener("click", function(){
     let buttonValue = this.textContent;
-    screenDisplay.innerHTML = (screenDisplay.innerHTML += buttonValue).replace(/^0+/, '').substr(0, 9);
+
+    // screenDisplay.innerHTML = ((screenDisplay.innerHTML += buttonValue).replace(/^0+/, '0').substr(0, 9)).toLocaleString("en-US");
+    
+    
 })
 
 decimal.addEventListener("click", function(){
@@ -31,13 +44,23 @@ decimal.addEventListener("click", function(){
   }
 })  
 
-dataOperation.addEventListener("click", function(){
-    screenDisplay.innerHTML = "0"
-    prevScreenDisplay.innerHTML = ""
 
-    // dataOperation.innerText = "AC"
-    // screenDisplay.innerHTML = screenDisplay.innerHTML.slice(0, -1)  
-})
+dataOperation.addEventListener("click", function(){
+    if(buttonValue = "C"){
+            screenDisplay.innerHTML = "0"
+            dataOperation.innerText = "AC"
+        if(buttonValue = "AC"){
+            dataOperation.addEventListener("click", function(){
+                dataOperations.forEach(function(button){
+                    button.style.backgroundColor = "rgb(231, 166, 44)"
+                    prevScreenDisplay.innerHTML = " "
+                })       
+            })
+        }
+    }
+})    
+
+
 
 dataOperations.forEach(function(button){
     button.addEventListener("click", function(e){
@@ -48,27 +71,34 @@ dataOperations.forEach(function(button){
                 prevScreenDisplay.innerHTML = (screenDisplay.innerHTML).replace(/^0+/, '')   
                 screenDisplay.innerHTML = "0" 
             dataEquals.addEventListener("click", function(){
-                screenDisplay.innerHTML = prevScreenDisplay.innerHTML * screenDisplay.innerHTML    
+                screenDisplay.innerHTML = (prevScreenDisplay.innerHTML * screenDisplay.innerHTML).toLocaleString("en-US");
+                button.style.backgroundColor = "rgb(231, 166, 44)"
             })
+
         } else if(buttonValue === "+"){
                 prevScreenDisplay.innerHTML = (screenDisplay.innerHTML).replace(/^0+/, '')   
-                screenDisplay.innerHTML = "0" 
+                screenDisplay.innerHTML = 0 
             dataEquals.addEventListener("click", function(){
-                    screenDisplay.innerHTML = prevScreenDisplay.innerHTML + screenDisplay.innerHTML   
+                screenDisplay.innerHTML = (parseFloat(prevScreenDisplay.innerHTML) + parseFloat(screenDisplay.innerHTML)).toLocaleString("en-US");
+                button.style.backgroundColor = "rgb(231, 166, 44)" 
             })
+
         } else if(buttonValue === "-"){
                 prevScreenDisplay.innerHTML = (screenDisplay.innerHTML).replace(/^0+/, '')   
                 screenDisplay.innerHTML = "0"
             dataEquals.addEventListener("click", function(){
-                screenDisplay.innerHTML = prevScreenDisplay.innerHTML - screenDisplay.innerHTML 
-            }) 
+                screenDisplay.innerHTML = (prevScreenDisplay.innerHTML - screenDisplay.innerHTML).toLocaleString("en-US");
+                button.style.backgroundColor = "rgb(231, 166, 44)"
+            })
+
         } else if(buttonValue === "÷"){
                 prevScreenDisplay.innerHTML = (screenDisplay.innerHTML).replace(/^0+/, '')   
                 screenDisplay.innerHTML = "0" 
             dataEquals.addEventListener("click", function(){
-                screenDisplay.innerHTML = prevScreenDisplay.innerHTML / screenDisplay.innerHTML 
+                screenDisplay.innerHTML = (prevScreenDisplay.innerHTML / screenDisplay.innerHTML).toLocaleString("en-US");
+                button.style.backgroundColor = "rgb(231, 166, 44)"
             }) 
-        }
+        } 
     })
 })
 

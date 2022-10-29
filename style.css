@@ -22,7 +22,7 @@ body{
 }
 
 .screen-display-pre{
-    display: none;
+    display: block;
 }
 
 textarea{
@@ -57,7 +57,7 @@ textarea{
     display: inline-block;
     text-align: center; 
     cursor: pointer;
-    padding: 10px;
+    padding: 2px;
     font-size: 26px;
     color: white;
     border: none;
